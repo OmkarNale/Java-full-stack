@@ -31,51 +31,27 @@ public class CurrencyDenominationsDeterminator {
 		int resultIndex = 0;
 		int balancedOutPayAmount = payAmount;
 				
-		// balance amount - [payAmount - (denomination * noOfTimes)]
-		// balance amount - 128 - (78 * 1) = 50
-		// balance amount - 50 - (25 * 2) = 0
-		
-		// {78, 60, 25, 12, 5} - Sorted Denominations Array
-		// Payable Amount - 128
 		while (index < denominations.length) {
 			
-			// 1st time -> 78 
-			// 2nd time -> 60
-			// 3rd time -> 25
 			int denomination = denominations[index];
 			
-			// 1st time -> 128 / 78 [1]
-			// 2nd time -> 50 / 60
-			// 3rd time -> 50 / 25 [ 2]
 			int quotient = balancedOutPayAmount / denomination;
 			
-			// 1st time -> 50
-			// 2nd time -> 
-			// 3rd time -> 0
 			int remainder = balancedOutPayAmount % denomination;
 
 			if (quotient !=0) {
 
-				// 78 * 1 -> 78
-				// 25 * 2 -> 50
 				int temp = denomination * quotient;				
 				
-				// 128 - 78 -> 50
-				// 50 - 50 -> 0
 				balancedOutPayAmount = balancedOutPayAmount - (temp);
 
-				// 78
-				// 25
 				resultDenominationArray[resultIndex] = denomination;
-				
-				// 1
-				// 2
+			
 				resultDenominationCountArray[resultIndex] = quotient;		
 				
 				resultIndex ++;
 				
 				if (remainder != 0) {
-					// Continue with the next iteration
 
 				}else if (remainder == 0) {
 					
@@ -87,18 +63,15 @@ public class CurrencyDenominationsDeterminator {
 				
 			}else if (quotient == 0) {
 				
-				// 2nd time -> Quotient -> 0
-				// Remainder -> 50
 				if (remainder != 0) {
 					
 					if (!isLastDenomination(index)) {
-						// Continue with the next iteration
+						
 					}else {
 						printErrorMessage();
 						break;						
 					}
 				}else if (remainder == 0) {
-					// Both quotient and remainder are zero, 
 					break;
 				}
 			}						
@@ -131,14 +104,9 @@ public class CurrencyDenominationsDeterminator {
 	
 	private void printSuccessMessage(int resultIndex) {
 		
-		// {a, b, c, d}
-		
-		// Output -> Denominations = {a, c, [EMPTY], [EMPTY]} / 2
-		// Output -> DenominationsCounter = {2, 3, [EMPTY], [EMPTY]}
-		
-		// {a, c, EMPTY, EMPTY}
+
 		resultDenominationArray = Arrays.copyOf(resultDenominationArray, resultIndex);
-		// {a, c}
+		
 		resultDenominationCountArray = Arrays.copyOf(resultDenominationCountArray, resultIndex);
 		
 		System.out.println("For the payment [" + payAmount +  "] and for the denominations " 
