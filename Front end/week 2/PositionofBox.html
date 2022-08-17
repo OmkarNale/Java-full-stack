@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Position of Box Model !</title>
+
+    <style>
+        div{
+
+            width: 300px;
+            height: 300px;
+            background-color: burlywood;
+            font-size: bold;
+            border: 2px solid green;
+            
+            /* every div block is by default static
+            Here the block will be arranged as per the flow of the document */
+            /* position:static; */
+
+            /*relative is used to set the block according to the previous tags position 
+            the space left by this tag will not be used.*/
+
+            /* position: relative;
+            top: 20px;
+            left: 250px; */
+
+            /* this block will be shown on the screen even when your scroll down the page 
+            we need to use position: -webkit-sticky; for the block to hover on all text*/
+
+            position: fixed;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 10px;
+            left: 50px;
+
+        }
+
+        
+    </style>
+</head>
+<body>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+        Non voluptates excepturi eligendi consectetur molestias commodi <br>
+        perspiciatis in atque beatae rem quos provident numquam, eos error quisquam voluptatibus modi neque magni?</p>
+    
+    <div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime quibusdam sint recusandae facilis voluptatum fugit, nobis vero ipsa nemo explicabo pariatur quasi ad vitae quam inventore modi voluptas in enim.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur odio, pariatur veritatis facilis dolore consequatur, illo fugit ea cumque, eius ut magni? Architecto id, natus tempora laborum deserunt ut perferendis!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam impedit dolorum itaque corrupti asperiores. Commodi deserunt, a non placeat architecto culpa quibusdam quae quis, necessitatibus est eius. Doloremque, modi amet!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iste hic mollitia vel neque vitae officiis accusantium aperiam incidunt. Quis cupiditate voluptas illum totam delectus exercitationem consequuntur fuga libero? Consequuntur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde nisi repellat iusto suscipit voluptatem quos accusamus id possimus? Illo numquam dolores incidunt quos in distinctio pariatur cupiditate maiores? Quae, soluta!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, qui? Libero vitae et dolorem modi, quaerat sint impedit esse voluptates placeat animi iusto voluptate quod aliquam laudantium excepturi facere corrupti!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cupiditate voluptate, laudantium, odio, possimus nesciunt eos numquam facere fuga deleniti aliquid dolores placeat in. Veniam nostrum debitis enim delectus soluta?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem laudantium consequatur ea sed nam laboriosam accusamus dolore nemo fugit quasi reprehenderit eveniet, iusto cum cumque. Est nesciunt earum deserunt corporis?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, enim reiciendis? Aliquid quaerat beatae velit incidunt. Vel, voluptas? Unde accusantium consequuntur sint quidem inventore voluptas perspiciatis voluptatibus asperiores repellat rerum.</p>
+    </div>
+</body>
+</html>
