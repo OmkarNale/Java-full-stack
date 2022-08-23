@@ -1,9 +1,13 @@
-function f() {
-    function g() {
-         x = 1;
-         console.log( x );
-        }
-    console.log( x );
-    g();
+var s="Hello World";
+
+var r="";
+
+for (var i=s.length-1;i>=0;i--)
+
+{
+
+r+=s[i];
+
 }
-f();
+
+console.log(r);
