@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tag </title>
+
+    <style>
+        * {
+            background-color: #2D85C5;
+        }
+        .Container{
+
+            width: 80%;
+            margin: auto;
+            padding: 10px;
+            border: 1px solid black;
+            background-color: white;
+            
+        }
+        input {
+            background-color: white;
+            padding: 5px;
+            margin: 5px;
+        }
+        label {
+            background-color: white;
+            color: crimson;
+        }
+        button {
+            background-color: white;
+        }
+        #id {
+            margin-left: 57px;
+        }
+        #username{
+            margin-left: 10px;
+        }
+        #password {
+            margin-left: 13px;
+        }
+        #date {
+            margin-left: 44px;
+        }
+        #radio {
+            margin-left: 33px;
+        }
+
+        #submit {
+            width: 70px;
+            margin: 10px 0 10px 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="Container">
+
+        <h1></h1>
+
+        <form  class="Container">
+
+            <label for="id">ID</label>
+            <input type="number" name="" id="id"><br>
+
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username"><br>
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password"><br>
+
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date"><br>
+
+            <label for="radio">Radio</label>
+            <input type="radio" name="gender" id="radio"><br>
+
+            <button type="submit" id="submit">Submit</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
