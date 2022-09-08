@@ -1,0 +1,230 @@
+/* General */
+
+body {
+    background-color: honeydew;
+    height: auto;
+    margin: 0%;
+}
+
+.list-unstyled {
+    list-style-type: none;
+    margin: 0;
+}
+
+
+/* Header */
+
+header {
+    font-weight: bolder;
+    padding: .7em;
+    font-size: xx-large;
+    text-align: center;
+    background-color: #4f4f4f;
+    color: white;
+}
+
+
+/* Nav Bar */
+
+#navigate {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0%;
+    z-index: 1;
+}
+
+.main-menu {
+    background-color: grey;
+}
+
+.main-menu>li {
+    display: inline-block;
+}
+
+.main-menu>li>a {
+    display: inline-block;
+    padding: 0.5em;
+    text-decoration: none;
+    color: white;
+}
+
+.main-menu>li>a:hover {
+    background-color: black;
+    color: white;
+}
+
+.item-with-sub-menu {
+    position: relative;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    padding: 0%;
+    top: 35px;
+    left: 1em;
+    white-space: nowrap;
+    background-color: whitesmoke;
+}
+
+.sub-menu>li>a {
+    display: inline-block;
+    text-decoration: none;
+    color: #004d7d;
+    padding: .5em;
+}
+
+.item-with-sub-menu:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu>li:hover {
+    background-color: black;
+}
+
+.sub-menu>li:hover a {
+    color: white;
+}
+
+
+/* Animated Ad Slideshow */
+
+.ad-slideshow>* {
+    animation: 20s autoplay4 infinite;
+    overflow: hidden;
+}
+
+.ad-slideshow>div>img {
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - 200px);
+    border: solid steelblue;
+    top: 0;
+    left: 0;
+}
+
+@keyframes autoplay4 {
+    0% {
+        height: auto;
+        padding: 0.5em 1em;
+        border: none
+    }
+    19.99% {
+        height: auto;
+        padding: 0.5em 1em;
+        border: none
+    }
+    20% {
+        height: 0;
+        padding: 0;
+        border: none
+    }
+    100% {
+        height: 0;
+        padding: 0;
+        border: none
+    }
+}
+
+.ad-slideshow>*:nth-child(1) {
+    animation-delay: 0s
+}
+
+.ad-slideshow>*:nth-child(2) {
+    animation-delay: -16s
+}
+
+.ad-slideshow>*:nth-child(3) {
+    animation-delay: -12s
+}
+
+.ad-slideshow>*:nth-child(4) {
+    animation-delay: -8s
+}
+
+.ad-slideshow>*:nth-child(5) {
+    animation-delay: -4s
+}
+
+
+/* Products */
+
+#covidcare,
+#diabetescare {
+    margin: 30px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.product-container {
+    position: relative;
+    margin: 20px;
+    width: 230px;
+    height: 230px;
+    border: 2px solid green;
+    display: inline-block;
+    background-color: lavender;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.product {
+    padding: 5%;
+}
+
+.product img {
+    border-radius: 10px;
+    width: 205px;
+    height: 120px;
+    align-items: center;
+}
+
+.product>p {
+    padding: 0%;
+    margin: 0%;
+    color: #003171;
+}
+
+.product-name {
+    padding: 0%;
+    margin: 0%;
+    color: black;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.product>a {
+    font-size: 1.1em;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    background-color: #E9CFFB;
+    color: orange;
+    padding: 2px 6px 2px 6px;
+    border: 1px solid blueviolet;
+    border-radius: 5px;
+    display: block;
+    width: 190px;
+    text-align: center;
+}
+
+.product>a:active {
+    background-color: rgb(250, 234, 230);
+    border-color: rgb(0, 255, 76);
+}
+
+.product-container:hover {
+    transform: scale(1.05);
+}
+
+
+/* footer */
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    position: relative;
+    bottom: 0%;
+    text-align: center;
+}

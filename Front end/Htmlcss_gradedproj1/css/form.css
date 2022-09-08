@@ -1,0 +1,93 @@
+/*General*/
+
+section {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.form-container {
+    position: relative;
+    left: 15%;
+    width: 75%;
+    height: 500px;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    background: url("../images/Lab-Test/lab-test.jpg") right no-repeat;
+    background-attachment: fixed;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/*Form*/
+
+.form {
+    background-color: white;
+    padding: 20px 50px;
+    max-width: 50%;
+}
+
+
+/*input*/
+
+input {
+    height: 30px;
+    width: 250px;
+    display: inline;
+    border: none;
+    border-bottom: 1px solid grey;
+    font-size: large;
+    margin-bottom: 30px;
+}
+
+input:focus {
+    outline: none !important;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+input[name^="option"] {
+    width: 20px;
+    height: 20px;
+}
+
+input,
+label,
+h3,
+#district {
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#district {
+    height: 50px;
+}
+
+.dropdown {
+    font-weight: 700;
+    display: block;
+    font-size: large;
+}
+
+
+/*Button*/
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    display: block;
+    margin: 20px;
+    width: 80px;
+    border-radius: 4px;
+    height: 35px;
+    color: white;
+    font-size: 20px;
+    float: right;
+    border: none;
+    background-color: purple
+}
